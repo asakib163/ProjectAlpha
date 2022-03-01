@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load static %}
+{% static "images"  as imag%}
+{% block content %}
+<!--container -->
+<div class="container-fluid">
+  <link rel="stylesheet" href="{% static 'FADocli.css' %}">
+  <div class="row">
+    <!-- list of department -->
+    <style>
+      .list-group-item{
+        background-color: burlywood;
+        width: 300px;
+        
+      }
+      .list-group-item:hover{
+        background-color: red;
+        color: white;
+        
+      }
+      
+      
+    </style>
+    <div class="col-3 mb-3">
+      <ul class="list-group">
+        <li class="btn btn-lg" id="listgroupitem">Select Group</li>
+        <li>
+          <hr class="dropdown-divider"> 
+        </li>
+        {% if user.is_authenticated %}
+        <li><a class="list-group-item btn btn-lg {%if link == 'bdregister'%} active {%endif%}"
+            href="bdregister" type="button">Blood donor Register</a></li>
+          {% endif %}
+        <li><a class="list-group-item btn btn-lg {%if link == 'a+list'%} active {%endif%}" href="a+list"
+            type="button">A+ (A Positive)</a></li>
+        <li><a class="list-group-item btn btn-lg {%if link == 'o+list'%} active {%endif%}" href="o+list"
+            type="button">O+ (O Positive)</a></li>
+        <li><a class="list-group-item btn btn-lg {%if link == 'b+list'%} active {%endif%}" href="b+list"
+            type="button">B+ (B Positive)</a></li>
+        <li><a class="list-group-item btn btn-lg {%if link == 'ab+list'%} active {%endif%} " href="ab+list"
+            type="button">AB+ (AB Positive)</a></li>
+        <li><a class="list-group-item btn btn-lg {%if link == 'a-list'%} active {%endif%}" href="a-list"
+            type="button">A- (A Negative)</a></li>
+        <li><a class="list-group-item btn btn-lg {%if link == 'o-list'%} active {%endif%}" href="o-list"
+            type="button">O- (O Negative)</a></li>
+        <li><a class="list-group-item btn btn-lg {%if link == 'b-list'%} active {%endif%}"
+            href="b-list" type="button">B- (B Negative)</a></li>
+        <li><a class="list-group-item btn btn-lg {%if link == 'ab-list'%} active {%endif%}"
+            href="ab-list" type="button">AB- (AB Negative)</a></li>
+            
+        
+      </ul>
+      <!-- list of department -->
+    </div>
+    <div class="col-8 mt-5" >
+      {% block content3 %}
+
+      {% endblock content3 %}
+
+
+    </div>
+  </div>
+</div>
+
+<!--container -->
+
+{% endblock content %}

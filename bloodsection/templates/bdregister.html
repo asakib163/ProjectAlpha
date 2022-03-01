@@ -1,0 +1,109 @@
+{% extends "bdbase.html" %}
+{% load static %}
+{% block content3 %}
+<!-- Icons font CSS-->
+<link href="{% static '/signupcss/vendor/mdi-font/css/material-design-iconic-font.min.css'%}" rel="stylesheet"
+    media="all">
+<link href="{% static '/signupcss/vendor/font-awesome-4.7/css/font-awesome.min.css'%}" rel="stylesheet" media="all">
+<!-- Font special for pages-->
+<link
+    href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+
+<!-- Vendor CSS-->
+<link href="{% static '/signupcss/vendor/select2/select2.min.css'%}" rel="stylesheet" media="all">
+<link href="{% static '/signupcss/vendor/datepicker/daterangepicker.css'%}" rel="stylesheet" media="all">
+
+<!-- Main CSS-->
+<link href="{% static '/signupcss/css/main.css'%} " rel="stylesheet" media="all">
+<div class="page-wrapper bg-danger p-t-130 p-b-100 font-poppins ">
+    <div class="wrapper wrapper--w680">
+        {% for msg in messages %}
+        <h3> {{msg}} </h3>
+        {% endfor %}
+        <div class="card card-4">
+            <div class="card-body">
+                <h2 class="title">Blood Donor Register Page</h2>
+                <form action='bdregister' method="POST">
+                    {% csrf_token %}
+                    <label class="label">Name</label>
+                    <div class="input-group">
+                        
+                        <input class="form-control form-control-lg" name="name" type="text" value=" {{user.first_name}} " required>
+                    </div>
+
+                    <label class="label">User Name</label>
+                    <div class="input-group">
+                        
+                        <input class="form-control form-control-lg" type="text" name="username" value=" {{user.username}} " required>
+
+                    </div>
+                    <label for="formFileLg" class="label">Image</label>
+                    <div class="input-group">
+                            
+                            <input class="form-control form-control-lg" id="formFileLg" name="image" type="file">
+
+                    </div>
+
+
+
+
+                    <label class="label">Email</label>
+                    <div class="input-group">
+                        <input class="form-control form-control-lg" type="email" name="email" value=" {{user.email}} " required>
+                    </div>
+                    <label class="label">Contact no</label>
+                    <div class="input-group">
+                        
+                        <input class="form-control form-control-lg" type="text" name="contact" required>
+                    </div>
+                    <label class="label">Profession</label>
+                    <div class="input-group">
+                       
+                        <input class="form-control form-control-lg" type="text" name="profession" required>
+                    </div>
+
+                    <label class="label">Blood Group</label>
+                    <div class="input-group">
+
+                        <div class="rs-select2 js-select-simple select--no-search">
+                            <select class="form-select form-select-lg mb-3" name="bloodgroup" required>
+                                <option disabled="disabled" selected="selected">Select Blood Group</option>
+                                <option value="A+">A+ (A Positive)</option>
+                                <option value="O+">O+ (O Positive)</option>
+                                <option value="B+">B+ (B Positive)</option>
+                                <option value="AB+">AB+ (AB Positive)</option>
+                                <option value="A-">A- (A Negative)</option>
+                                <option value="O-">O- (O Negative)</option>
+                                <option value="B-">B- (B Negative)</option>
+                                <option value="AB-">AB- (AB Negative)</option>
+                            </select>
+                            <div class="select-dropdown"></div>
+                        </div>
+                    </div>
+                    <div class="p-t-15">
+                        <button class="btn btn--radius-2 btn--blue" type="submit">Submit</button>
+                    </div>
+                </form>
+                <div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Jquery JS-->
+<script src="{% static '/signupcss/vendor/jquery/jquery.min.js'%}"></script>
+<!-- Vendor JS-->
+<script src="{% static '/signupcss/vendor/select2/select2.min.js'%}"></script>
+<script src="{% static '/signupcss/vendor/datepicker/moment.min.js'%}"></script>
+<script src="{% static '/signupcss/vendor/datepicker/daterangepicker.js'%}"></script>
+
+
+<!-- Main JS-->
+<script src="{% static '/signupcss/js/global.js'%}"></script>
+<script src="{% static '/signupcss/js/script.js'%}"></script>
+
+
+{% endblock content3 %}

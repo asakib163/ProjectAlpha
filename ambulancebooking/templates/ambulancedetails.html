@@ -1,0 +1,235 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="container-fluid">
+    <link rel="stylesheet" href="{% static 'FADocli.css' %}">
+    <div class="row">
+        <!-- list of Ambulance Category -->
+        <div class="col-3 bg-dark" style="position: fixed; width:300px">
+            <ul class="list-group">
+                <li class="btn btn-lg" id="listgroupitem">Ambulance Category</li>
+                <li>
+                    <hr class="dropdown-divider" style="color: burlywood; height:3px;">
+                </li>
+                <li>
+                    <ul class="list-group mb-3">
+                        <li><a class="list-group-item btn btn-lg" href="#ac_ambulance" type="button">AC Ambulance</a>
+                        </li>
+                        <li><a class="list-group-item btn btn-lg" href="#non_ac_ambulance" type="button">Non-AC
+                                Ambulance</a></li>
+                        <li><a class="list-group-item btn btn-lg" href="#freezer_ambulance" type="button">Freezer
+                                Ambulance</a></li>
+                        <li><a class="list-group-item btn btn-lg" href="#icu_ambulance" type="button">ICU Ambulance</a>
+                        </li>
+                        
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- list of Ambulance Category -->
+        <div class="col-9" style="margin-left: 400px;">
+            <!-- AC Ambulance Details -->
+            <div id="ac_ambulance">
+                <h1 class="h1">AC Ambulance</h1>
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="height: 500px;">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{% static 'images/ac_ambulance_pic1.jpg' %}" class="d-block w-100" alt="Picture 1"
+                                style="height: 500px;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'images/ac_ambulance_pic2.jpeg' %}" class="d-block w-100"
+                                alt="Picture 2" style="height: 500px;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'images/ac_ambulance_pic3.jpeg' %}" class="d-block w-100"
+                                alt="Picture 3" style="height: 500px;">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        style="border: 0px;" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        style="border: 0px;" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <br>
+
+                <h3 class="h3">Details</h3>
+                <hr style="color: gray;">
+
+                <p>Alpha Ambulance is a private ac ambulance service provider that arranges an ambulance in Chittagong at 24 hours anytime, any moment in any situation. Just make a call we will run to you no matter what the time is. We always ready to support and help you whether your home door or hospital with our modern and various kind of ambulance transport service.
+                    We have much big size ac ambulance where we add all modern facilities like oxygen mask or oxygen, stretcher, wheelchairs, paramedic helper and much more. We all know Chittagong is a city where the jam is an unavoidable fact. For this, we selected such expert driver those are well known about all shortcuts. Our drivers are always aware of how to save time for your patience that is most important facts in an emergency. They have an ability of fast moving and fast reaching out at the destination point in spite of jam problem within Chittagong city.
+                    Overall drivers are well known about the location across the Chittagong and have the capability to take instance decisions. At the point of RENT, you need not worry about. We offer much reasonable rent which our client can afford easily, Keep in mind rent of ambulance mainly depended on the location, time, total distance, waiting returning and etc.
+                    </p>
+                <h4>Features of our AC Ambulances</h4>
+                <ul>
+                    <li>Duel AC Or Single AC</li>
+                    <li>More than 2 seat capacity including the patient.</li>
+                    <li>A very helpful streacher that helps to lift and unlift patient</li>
+                </ul>
+            </div>
+            <!-- AC ambulance details -->
+            <!-- Non-AC ambulance details -->
+            <hr style="color: gray; height:3px">
+            <div id="non_ac_ambulance">
+                <h1 class="h1">Non-AC Ambulance</h1>
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="height: 500px;">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{% static 'images/normal_ambulance_pic1.jpg' %}" class="d-block w-100"
+                                alt="Picture 1" style="height: 500px;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'images/normal_ambulance_pic4.jpg' %}" class="d-block w-100"
+                                alt="Picture 2" style="height: 500px;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'images/normal_ambulance_pic5.jpg' %}" class="d-block w-100"
+                                alt="Picture 3" style="height: 500px;">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        style="border: 0px;" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        style="border: 0px;" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <br>
+                <!-- Normal ambulance details -->
+                <h3 class="h3">Details</h3>
+                <hr style="color: gray;">
+                <p>Many people often face bitter experience in their way of searching an ambulance service within Chittagong. We know the ambulance is an emergency requirement vehicle so people always need a quick response. In this case, Alpha ambulance service offers you local ambulance service with high range facilities that available 24 hours at any of your demanded place. Just make a call you find us ready for helping you.
+                    Eventually, for ultimate support to your patients, we provide in our NON-AC ambulance an oxygen mask, stretcher, paramedic helper, patient health beds, wheel chairs and every modern and most need substance. Our every ambulance is new, tip top, free from error, clean and well maintenance. We always give our first priority of every patient need and ease.
+                    As we all know drivers of any ambulance service play a great role. So, we selected experience and experts drivers out of so many. Our every driver has the capability to faces difficult situation and has ability to take instance decision. In a jam full Chittagong city, it is important for a patient to save time and reaches the destination place quickly. In this manner our Alpha ambulance service every driver very finely knows how to save time and reaches the destination place easily and effortlessly.
+                    
+                    
+                    At the point of rent, we set fair enough and budget-friendly price. Our every ambulance tips fully deepened on the total distance, location, time of service waiting return and some more.
+                    </p>
+                    <h6>Features of Non AC Ambulance </h6>
+                    <ul>
+                        <li>Non-AC Ambulance rent is low enough.</li>
+                        <li>There is a fan in the car. Only for the patient.</li>
+                        <li>For the poor and helpless patients, we rent the lowest. </li>
+                    </ul>
+
+            </div>
+            <div id="freezer_ambulance">
+                <h1 class="h1">Freezer Ambulance</h1>
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="height: 500px;">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{% static 'images/freezer_ambulance_pic1.jpeg' %}" class="d-block w-100"
+                                alt="Picture 1" style="height: 500px;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'images/freezer_ambulance_pic2.jpeg' %}" class="d-block w-100"
+                                alt="Picture 2" style="height: 500px;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'images/freezer_ambulance_pic3.jpeg' %}" class="d-block w-100"
+                                alt="Picture 3" style="height: 500px;">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        style="border: 0px;" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        style="border: 0px;" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <br>
+                <!-- Normal ambulance details -->
+                <h3 class="h3">Details</h3>
+                <hr style="color: gray;">
+                <p>Freezer ambulances are used to transfer any corpus from one place to another. In this case, the body is kept at freezer ambulance-7-degree temperature. So, there is no bad odor from the body, and the body is free of virus. Anyone in a freezing ambulance According to his wish, the dead body can be frozened. 
+                    Our freezing the direct import from Japan were brought. Many times, the bodies of the dead are seen abroad. 
+                    In this case of the person who wants to see the body in the last, the dead body can be freezing the dead body for 10 hours or 15 hours, there is no problem.
+                    The freezer cost is just 600/- tk per hour.
+                    </p>
+                <h6> What's in the Freezing Ambulance Service?</h6>
+                <ul>
+                    <li>High quality steel starchers keeping the body. </li>
+                    <li>There are four wells below the richness.</li>
+                    <li>There are good arrangements for glass to see the body on the left side of the car. </li>
+                    <li>After completing the duty of the body, clean the car with a datel or savlon.</li>
+                    <li>There are lighting facilities inside to see the body. </li>
+                </ul>
+            </div>
+            <div id="icu_ambulance">
+                <h1 class="h1">ICU(Intensice Care Unit) Ambulance</h1>
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="height: 500px;">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{% static 'images/icu_ambulance_pic1.jpeg' %}" class="d-block w-100"
+                                alt="Picture 1" style="height: 500px;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'images/icu_ambulance_pic2.jpg' %}" class="d-block w-100"
+                                alt="Picture 2" style="height: 500px;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'images/icu_ambulance_pic3.jpeg' %}" class="d-block w-100"
+                                alt="Picture 3" style="height: 500px;">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        style="border: 0px;" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        style="border: 0px;" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <br>
+
+                <h3 class="h3">Details</h3>
+                <hr style="color: gray;">
+                <p> ICU ambulance is the most advanced ambulance service which gives full support to the serious, critical injuries patient with all necessary substance. Basically, this ambulance uses for shifting dangerous patients from one place to another with all facilities as present in real ICU  hospital cabin. For your need, we Alpha Hospital provide high-class life support ambulance 24/7 hours at anytime. Just make a call and we will run to your place.
+                    Beside we decorated the emergency ambulance with cardiac monitor, suction machine, infusion pumps, emergency life-saving mediators, ventilator, blood dram tools and many more. In a word, our ICU ambulance is just like an ICU cabin of a hospital.
+                     Now as the point of an emergency ambulance service a driver plays a great role. And for this, we selected such expert drivers who know how to save time and reach the destination place at an exact time which is a most valuable thing for a serious patience. All our engage drivers are very well trained and conscious about the seriousness of duty and emergency. 
+                    In spite of high-quality service, we take very reasonable rent. Though ICU ambulance charge is high then any ordinary ambulance but we assure you to take budget friendly rent. Some basic things are certainly matter in case of rent, like distance, waiting for the return, location, time of service and etc. 
+                    </p>
+
+            </div>
+            <!-- <div id="book_ambulance">
+                <h1 class="h1">Book An Ambulance</h1>
+
+                <form action="" method="POST">
+                    <input type="email" class="form-control" value=" {{user.email}} "><br>
+                    <input type="text" class="form-control" value=" {{user.first_name}} "><br>
+                    <label for="">Select Ambulance Category</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>AC Ambulance</option>
+                        <option value="1">Non-AC Ambulance</option>
+                        <option value="2">Freezer Ambulance</option>
+                        <option value="3">ICU Ambulance</option>
+                    </select><br>
+                    <br>
+                    <button class="btn btn-dark" type="submit">Submit</button>
+
+                </form>
+            </div> -->
+            <hr>
+            <h3>Contact us</h3>
+            <hr>
+            <h6><b>Email: </b> asakib163@gmail.com</h6>
+            <h6><b>Mobile:</b> 01834596478</h6>
+        </div>
+        {% endblock content %}

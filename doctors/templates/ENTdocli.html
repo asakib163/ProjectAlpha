@@ -1,0 +1,46 @@
+{% extends "docbase.html" %}
+
+{% block content1 %}
+
+<!-- list of Doctors -->
+
+<header>
+  <h1 class="h1">Doctors of Ear,nose & throat Department</h1>
+</header>
+<div class="row" id="cl9row1">
+  <!--1st row-->
+  {% for doc in docs %}
+  {% if doc.department == 'ENT' %}
+  
+  <div class="card" style="width: 18rem;">
+    <img src="{{doc.img.url}}" class="card-img-top" alt="...">
+    
+    <div class="card-body">
+      <h5 class="card-title" name = "doc_name">Dr. {{doc.doc_name}}</h5>
+      <p class="card-text">{{doc.Speciality}}</p>
+      <form action="appointment" method="POST">
+        {% csrf_token %}
+      <input type="hidden" value="{{doc.img.url}}" name="img">
+      <input type="hidden" value="{{doc.doc_name}}" name="doc_name">
+      <input type="hidden" value="{{doc.Speciality}}" name="doc_speciality">
+      <input type="hidden" value="{{doc.email}}" name="doc_email">
+      <input type="hidden" value="{{doc.department}}" name="doc_department">
+      <input type="hidden" value="{{doc.degree}}" name="doc_degree">
+      <input type="hidden" value="{{doc.experiance}}" name="doc_experiance">
+      <input type="hidden" value="{{doc.contact_no}}" name="doc_contact">
+      
+      {% if user.is_authenticated %}
+        <button type="submit" name="system"  class="btn btn-primary" >Take appointment</button>
+      </form>
+      {% else %}
+      <h6> Please, <a class="btn" href="login"> Log In </a> to take appointment </h6>
+      {% endif %}
+    </div>
+  </div>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  {% endif %}
+  {% endfor %}
+</div>
+<!-- list of Doctors -->
+
+{% endblock content1 %}

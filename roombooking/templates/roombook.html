@@ -1,0 +1,330 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="container-fluid">
+    <link rel="stylesheet" href="{% static 'FADocli.css' %}">
+    <div class="row">
+        <!-- list of Ambulance Category -->
+        <div class="col-3 bg-dark" style="position: fixed;">
+            <ul class="list-group">
+                <li class="btn btn-lg" id="listgroupitem">Room Category</li>
+                <li>
+                    <hr class="dropdown-divider" style="color: burlywood; height:3px;">
+                </li>
+                <li>
+                    <ul class="list-group mb-3">
+                        <li><a class="list-group-item btn btn-lg" href="#cabin" type="button">Cabin</a>
+                        </li>
+                        <li><a class="list-group-item btn btn-lg" href="#vip_cabin" type="button">VIP Cabin</a>
+                        </li>
+                        <li>
+                            <div class="dropdown">
+                                <button class="btn btn-lg list-group-item dropdown-toggle" type="button"
+                                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Care Unit
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"
+                                    style="background-color: darkcyan;">
+                                    <li><a class="dropdown-item" href="#CCU">CCU (Coronary Care Unit)</a></li>
+                                    <li><a class="dropdown-item" href="#ICU">ICU (Intensive Care Unit)</a></li>
+                                    <li><a class="dropdown-item" href="#NICU">NICU (Neonatal Intensive Care Unit)</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a class="list-group-item btn btn-lg" href="#PO" type="button">Post Operatives</a></li>
+                        <li><a class="list-group-item btn btn-lg" href="#OT" type="button">Operation Theatre</a>
+                        </li>
+                        <li><a class="list-group-item btn btn-lg" href="#LR" type="button">Labour Room</a>
+                        <li><a class="list-group-item btn btn-lg" href="#rb" type="button">Book Room</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- list of Ambulance Category -->
+        <div class="col-9" style="margin-left: 300px;">
+            <!-- AC Ambulance Details -->
+            <div id="cabin">
+                <h1 class="h1">Cabin</h1>
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="height: 500px;">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{% static 'images/cabin.jpg' %}" class="d-block w-100" alt="Picture 1"
+                                style="height: 500px;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'images/cabin1.jpg' %}" class="d-block w-100"
+                                alt="Picture 2" style="height: 500px;">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        style="border: 0px;" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        style="border: 0px;" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <br>
+
+                <h3 class="h3">Details</h3>
+                <hr style="color: gray;">
+
+                <p>AC Ambulance Service in Dhaka and with all districs of Bangaladesh. Thos anbulance service is the
+                    most comfortable and luxurious than other ambulance servicea. Our Ambulance Service is the one of
+                    the largest ambulance service in Bangladesh.</p>
+                <h6>Features of our AC Ambulances</h6>
+                <ul>
+                    <li>Duel AC Or Single AC</li>
+                    <li>More than 2 seat capacity including the patient.</li>
+                    <li>A very helpful streacher that helps to lift and unlift patient</li>
+                </ul>
+            </div>
+            <!-- AC ambulance details -->
+            <!-- Non-AC ambulance details -->
+            <div id="vip_cabin">
+                <h1 class="h1">VIP Cabin</h1>
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="height: 500px;">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{% static 'images/vip_cabin.jpeg' %}" class="d-block w-100"
+                                alt="Picture 1" style="height: 500px;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'images/vip_cabin1.jpeg' %}" class="d-block w-100"
+                                alt="Picture 2" style="height: 500px;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'images/normal_ambulance_pic5.jpg' %}" class="d-block w-100"
+                                alt="Picture 3" style="height: 500px;">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        style="border: 0px;" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        style="border: 0px;" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <br>
+                <!-- Normal ambulance details -->
+                <h3 class="h3">Details</h3>
+                <hr style="color: gray;">
+                <p>For the people who want an ambulance at a cheaper price, we offer Non-AC ambulance service. All of
+                    our Non-AC ambulances have almost same facilities like the AC ambulances.</p>
+
+            </div>
+            <div id="CCU">
+                <h1 class="h1">CCU (Coronary Care Unit) </h1>
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="height: 500px;">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{% static 'images/ccu.jpg' %}" class="d-block w-100"
+                                alt="Picture 1" style="height: 500px;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'images/ccu1.jpg' %}" class="d-block w-100"
+                                alt="Picture 2" style="height: 500px;">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        style="border: 0px;" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        style="border: 0px;" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <br>
+                <!-- Normal ambulance details -->
+                <h3 class="h3">Details</h3>
+                <hr style="color: gray;">
+            </div>
+            <div id="ICU">
+                <h1 class="h1">ICU(Intensice Care Unit)</h1>
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="height: 500px;">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{% static 'images/icu.jpg' %}" class="d-block w-100"
+                                alt="Picture 1" style="height: 500px;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'images/icu1.jpg' %}" class="d-block w-100"
+                                alt="Picture 2" style="height: 500px;">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        style="border: 0px;" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        style="border: 0px;" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <br>
+
+                <h3 class="h3">Details</h3>
+                <hr style="color: gray;">
+
+            </div>
+            <div id="NICU">
+                <h1 class="h1">NICU( Neonatal Intensice Care Unit)</h1>
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="height: 500px;">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{% static 'images/nicu1.jpg' %}" class="d-block w-100"
+                                alt="Picture 1" style="height: 500px;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'images/nicu.jpg' %}" class="d-block w-100"
+                                alt="Picture 2" style="height: 500px;">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        style="border: 0px;" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        style="border: 0px;" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <br>
+
+                <h3 class="h3">Details</h3>
+                <hr style="color: gray;">
+
+            </div>
+            <div id="PO">
+                <h1 class="h1">Post Operative</h1>
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="height: 500px;">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{% static 'images/Postoperative.jpg' %}" class="d-block w-100"
+                                alt="Picture 1" style="height: 500px;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'images/icu_ambulance_pic2.jpg' %}" class="d-block w-100"
+                                alt="Picture 2" style="height: 500px;">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        style="border: 0px;" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        style="border: 0px;" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <br>
+
+                <h3 class="h3">Details</h3>
+                <hr style="color: gray;">
+
+            </div>
+            <div id="OT">
+                <h1 class="h1">Operation Theatre</h1>
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="height: 500px;">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{% static 'images/operation.jpg' %}" class="d-block w-100"
+                                alt="Picture 1" style="height: 500px;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'images/operation1.jpg' %}" class="d-block w-100"
+                                alt="Picture 2" style="height: 500px;">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        style="border: 0px;" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        style="border: 0px;" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <br>
+
+                <h3 class="h3">Details</h3>
+                <hr style="color: gray;">
+
+            </div>
+            <div id="LR">
+                <h1 class="h1">Labour Room</h1>
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="height: 500px;">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{% static 'images/labor.jpg' %}" class="d-block w-100"
+                                alt="Picture 1" style="height: 500px;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'images/labor1.jpg' %}" class="d-block w-100"
+                                alt="Picture 2" style="height: 500px;">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        style="border: 0px;" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        style="border: 0px;" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <br>
+                <h3 class="h3">Details</h3>
+                <hr style="color: gray;">
+            </div>
+            <div id="rb">
+                <h1 class="h1">Book Room</h1>
+                <form action="rooms" method="POST">
+                    {% csrf_token %}
+                    <input type="hidden" class="form-control" name="fname" value=" {{user.first_name}} "><br>
+                    <input type="hidden" class="form-control" name="email" value=" {{user.email}} "><br>
+                    
+                    <label for="">Select Room Category</label>
+                    <select class="form-select" name="room_category" aria-label="Default select example" required>
+                        <option selected value="Cabin">Cabin</option>
+                        <option value="VIP_Cabin">VIP_cabin</option>
+                        <option value="CCU">CCU</option>
+                        <option value="ICU">ICU</option>
+                        <option value="NICU">NICU</option>
+                        <option value="PO">Post Operatives</option>
+                        <option value="OT">Operation Theatre</option>
+                        <option value="LR">Labour Room</option>
+                    </select><br>
+                    <br>
+                    <label for="">Contact number</label>
+                    <input type="text" name="contact" class="form-control" required><br>
+                    <label>Room need Date</label>
+                    <input type="date" name="booking_for" class="form-control" required>
+                    <br>
+                    <button class="btn btn-lg btn-dark" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        {% endblock content %}

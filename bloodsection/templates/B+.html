@@ -1,0 +1,26 @@
+{% extends "bdbase.html" %}
+
+{% block content3 %}
+
+<!-- list of Doctors -->
+
+<header>
+  <h1 class="h1">B+ (B Positive) Blood Donors</h1>
+</header>
+<div class="row" id="cl9row1">
+  <!--1st row-->
+  {% for bd in bds %}
+  {% if bd.Blood_group == 'B+' %}
+  <div class="card" style="width: 18rem;">
+    <img src="{{bd.imag.url}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title" name = "bd_name">{{bd.fname}}</h5>
+      <p class="card-text">{{bd.contact}}</p>    </div>
+  </div>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  {% endif %}
+  {% endfor %}
+</div>
+<!-- list of Doctors -->
+
+{% endblock content3 %}

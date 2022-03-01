@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+{% static "images"  as imag%}
+{% block content %}
+<!--container -->
+<div class="container-fluid">
+  <link rel="stylesheet" href="{% static 'FADocli.css' %}">
+  <div class="row">
+    <!-- list of department -->
+    <div class="col-3">
+      <ul class="list-group">
+        <li class="btn btn-lg" id="listgroupitem">Select Department</li>
+        <li>
+          <hr class="dropdown-divider">
+        </li>
+        <li><a class="list-group-item btn btn-lg {%if link == 'ansdoctorlist'%} active {%endif%}" href="ansdoctorlist"
+            type="button">Anesthetics</a></li>
+        <li><a class="list-group-item btn btn-lg {%if link == 'Cardiodoclist'%} active {%endif%}" href="Cardiodoclist"
+            type="button">Cardiology</a></li>
+        <li><a class="list-group-item btn btn-lg {%if link == 'ENTdocli'%} active {%endif%}" href="ENTdocli"
+            type="button">Ear,nose & throat</a></li>
+        <li><a class="list-group-item btn btn-lg {%if link == 'ESDdocli'%} active {%endif%} " href="ESDdocli"
+            type="button">Elderly services Department</a></li>
+        <li><a class="list-group-item btn btn-lg {%if link == 'Gastrodocli'%} active {%endif%}" href="Gastrodocli"
+            type="button">Gastroenterology</a></li>
+        <li><a class="list-group-item btn btn-lg {%if link == 'Genedocli'%} active {%endif%}" href="Genedocli"
+            type="button">General Surgery</a></li>
+        <li><a class="list-group-item btn btn-lg {%if link == 'Gynaecologydocli'%} active {%endif%}"
+            href="Gynaecologydocli" type="button">Gynaecology</a></li>
+        <li><a class="list-group-item btn btn-lg {%if link == 'Hematologydocli'%} active {%endif%}"
+            href="Hematologydocli" type="button">Hematology</a></li>
+      </ul>
+      <!-- list of department -->
+    </div>
+    <div class="col-8">
+      {% block content1 %}
+
+      {% endblock content1 %}
+
+
+    </div>
+  </div>
+</div>
+
+<!--container -->
+
+{% endblock content %}
